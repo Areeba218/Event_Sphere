@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EventSphere Management
 
 Web platform for expos and trade shows: organizers manage events, exhibitors and booths; exhibitors apply and pick booths; attendees discover events, sessions and exhibitors. **Stack:** MongoDB · Express · React (Vite) · Node.js · Socket.IO.
@@ -46,3 +47,6 @@ Tests use a throw-away database. By default `mongodb-memory-server` downloads a 
 ## Before you publish
 * **Never commit `backend/.env`.** If real credentials were ever shared or committed, rotate the MongoDB password, `JWT_SECRET` and SMTP app password.
 * Serve both apps over HTTPS, set `FRONTEND_URL`, `TRUST_PROXY` (behind a proxy) and restrict organizer sign-up with `ORGANIZER_INVITE_CODE` or `ALLOW_ORGANIZER_SIGNUP=false`.
+=======
+# Event_Sphere
+>>>>>>> 7dfd595669d08038e2d29931f4f6ff8f031632be

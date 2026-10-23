@@ -1,0 +1,32 @@
+.aurora{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#2d0f2e}
+.shape{position:absolute;will-change:transform}
+
+.orb{border-radius:50%;filter:blur(18px);opacity:.5}
+.orb-blue{width:15vw;height:15vw;left:5vw;top:40vh;background:#1955e9;animation:drift-a 18s ease-in-out infinite alternate}
+.orb-pink{width:11vw;height:11vw;left:60vw;top:64vh;background:#ff61cf;animation:drift-b 22s ease-in-out infinite alternate}
+.orb-violet{width:9vw;height:9vw;right:10vw;top:34vh;background:#8a3ad9;animation:drift-a 20s ease-in-out infinite alternate-reverse}
+
+.glass{background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:60% 40% 30% 70% / 60% 30% 70% 40%}
+.glass-one{right:-5vw;top:6vh;width:24vw;height:28vw;min-width:190px;animation:morph 22s ease-in-out infinite,drift-b 28s ease-in-out infinite alternate}
+.glass-two{left:-4vw;bottom:4vh;width:17vw;height:19vw;min-width:150px;animation:morph 26s ease-in-out infinite reverse,drift-a 30s ease-in-out infinite alternate}
+
+.ring{border-radius:50%;border:2px solid rgba(255,255,255,.2)}
+.ring-one{left:-8vw;top:-9vw;width:24vw;height:24vw;min-width:180px;min-height:180px;animation:spin 60s linear infinite}
+.ring-one::after{content:"";position:absolute;inset:20%;border-radius:50%;background:#ff61cf;opacity:.55;filter:blur(2px)}
+.ring-two{right:8vw;bottom:10vh;width:9vw;height:9vw;min-width:80px;min-height:80px;border-color:rgba(255,255,255,.14);animation:drift-b 24s ease-in-out infinite alternate}
+
+@keyframes drift-a{0%{transform:translate(0,0) scale(1)}100%{transform:translate(4vw,-6vh) scale(1.12)}}
+@keyframes drift-b{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-5vw,5vh) scale(.92)}}
+@keyframes morph{0%,100%{border-radius:60% 40% 30% 70% / 60% 30% 70% 40%}50%{border-radius:30% 60% 70% 40% / 50% 60% 30% 60%}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.site-shell{position:relative;overflow:clip}
+.site-shell > .site-header,.site-shell > main,.site-shell > .site-footer{position:relative;z-index:1}
+.site-shell .site-header{background:rgba(45,15,46,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);position:sticky;top:0;z-index:20}
+.site-shell .search-section{background:rgba(54,18,52,.85)}
+.site-shell .exhibitor-section{background:rgba(58,22,57,.85)}
+.site-shell .site-footer{background:rgba(36,10,38,.92)}
+.site-shell .event-card{background:rgba(58,22,57,.88)}
+
+@media (prefers-reduced-motion:reduce){.aurora *{animation:none!important}}
+@media (max-width:700px){.glass-two,.ring-two{display:none}}
